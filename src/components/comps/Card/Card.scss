@@ -1,0 +1,30 @@
+@import '../../../styles/var.scss';
+@import '../../../styles/fonts.scss';
+@import '../../../styles/mixins.scss';
+
+.card {
+    font-family: $card-font;
+    width: 300px;
+    border: 3px solid $button-color;
+    margin: 10px;
+    text-align: center;
+
+    &__button {
+        width: 150px;
+        height: 40px; 
+    }
+
+    &__transcription, &__translation {
+        font-size: 20px;
+    }
+};
+
+.selected {
+    border: 5px solid orange;
+    font-weight: bolder;
+    font-size: large;
+  }
+
+  .open {
+    display: none;
+  }

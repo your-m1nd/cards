@@ -1,0 +1,22 @@
+@import '../../styles/var.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts';
+
+footer {
+    margin-top: 500px;
+    background-color: $header-footer-color;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-author {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+    &__github-icon {
+        width: 20px;
+    }
+}

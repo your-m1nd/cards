@@ -1,0 +1,31 @@
+@import '../../styles/var.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts';
+
+.header {
+    background-color: $header-footer-color;
+    height: 40px;
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-bottom: 90px;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+img {
+    width: 600px;
+    margin-top: 30px;
+}
+
+.menu {
+    &__button {
+        width: 200px;
+        height: 50px;
+        font-weight: 700;
+        border-radius: 1000px;
+        background: linear-gradient(90deg, $gradient-color-1 0%, $gradient-color-2 100%);
+    }
+}

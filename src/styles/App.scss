@@ -1,0 +1,15 @@
+@import '../styles/fonts';
+@import '../styles/var.scss';
+@import '../styles/mixins.scss';
+
+body {
+    font-family: $main-font;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+

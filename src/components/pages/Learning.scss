@@ -1,0 +1,20 @@
+@import '../../styles/var.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts.scss';
+
+section {
+   @include flex-center-center;
+}
+
+.arrow-left {
+    @include small-button-styles;
+    background-color: $arrow-color;
+    background-image: url('./arrow-left.png');
+
+}
+
+.arrow-right {
+    @include small-button-styles;
+    background-color: $arrow-color;
+    background-image: url('./arrow-right.png');
+}

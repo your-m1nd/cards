@@ -1,0 +1,45 @@
+@import '../../styles/var.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts.scss';
+
+.training {
+    display: grid;
+    border: 1px solid $table-main-border-color;
+}
+
+table {
+    @include table-border;  /* граница всей таблицы */
+}
+tr {
+    @include table-border;  /* границы между строками */
+}
+td, th {
+    @include table-border;  /* границы между столбцами */
+}
+
+th {
+    background-color: $table-header-color;
+}
+
+td {
+    background-color: $table-bg-color;
+}
+
+.save-button {
+    @include save-cancel-button-styles;
+}
+
+.cancel-button {
+   @include save-cancel-button-styles;
+}
+
+.edit-button {
+  @include small-button-styles;
+  background-image: url('./edit-button.png');
+}
+
+.delete-button {
+  @include small-button-styles;
+  background-image: url('./delete-button.png');
+  
+}
