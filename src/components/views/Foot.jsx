@@ -11,7 +11,7 @@ function Foot() {
               src={githubIcon}
               alt="github icon"
             />
-            <a href="https://github.com/your_m1nd" target="#blank">Viktoria</a>
+            <a href="https://github.com/your-m1nd" target="#blank">Viktoria</a>
           </div>
       </footer>;
   }

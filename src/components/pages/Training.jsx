@@ -2,9 +2,9 @@ import React from 'react';
 import DataList from '../views/DataList';
 
 function Training() {
-    return <div>
+    return <React.Fragment>
     <DataList />
-    </div>
+    </React.Fragment>
 }
 
 export default Training;

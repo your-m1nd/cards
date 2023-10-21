@@ -1,18 +1,18 @@
 import React from "react";
 import './styles/App.scss';
-import Head from './components/views/Head';
-import Foot from "./components/views/Foot";
+import Main from "./components/pages/Main";
 import Learning from "./components/pages/Learning";
 import Training from "./components/pages/Training";
+import Error from "./components/pages/Error/Error";
 
 function App() {
 
   return (
     <div className="App">
-      <Head></Head>
-      <Foot></Foot>
+      <Main></Main>
       <Learning></Learning>
       <Training></Training>
+      <Error></Error>
     </div>
   );
 }
