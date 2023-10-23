@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Card.scss';
-import Button from '../Button';
+import Button from '../Button/Button';
 
 function Card(props) { 
 

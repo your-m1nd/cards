@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import Card from '../comps/Card/Card';
-import '../comps/Card/Card.scss';
-import '../pages/Learning.scss';
+import Card from '../../comps/Card/Card';
+import '../Learning/Learning.scss';
 
 const words = [
     {

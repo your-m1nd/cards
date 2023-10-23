@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './education.jpg';
-import '../views/Head.scss';
+import '../Head/Head.scss';
 import { Link } from 'react-router-dom';
 
 function Head() {

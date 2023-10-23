@@ -1,5 +1,5 @@
 import React from 'react';
-import DataList from '../views/DataList';
+import DataList from '../../views/DataList/DataList';
 
 function Training() {
     return <React.Fragment>
