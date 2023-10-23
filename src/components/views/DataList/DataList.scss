@@ -2,12 +2,10 @@
 @import '../../../styles/mixins.scss';
 @import '../../../styles/fonts.scss';
 
-.training {
-    display: grid;
-    border: 1px solid $table-main-border-color;
-}
 
 table {
+    display: inline-block;
+    margin-top: 10px;
     @include table-border;  /* граница всей таблицы */
 }
 tr {

@@ -13,8 +13,8 @@ function App() {
       <Routes>
       <Route path={'/learning'} element={<Learning/>}></Route>
       <Route path={'/training'} element={<Training/>}></Route>
-      <Route path={'/error'} element={<Error/>}></Route>
       <Route exact path={'/'} element={<Main/>}></Route>
+      <Route path="*" element={<Error/>}></Route>
       </Routes>
     </div>
   );
