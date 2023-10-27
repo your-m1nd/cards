@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import './DataList.scss';
 
 function DataList() { 
@@ -29,18 +29,22 @@ function DataList() {
      },
   ];
   
+  const [isEdit, setIsEdit] = useState(false);
+  const [isSave, setIsSave] = useState(false);
+
   let data = words.map((word) => {
     return <tr key={word.id}>
       <td>{word.name}</td>
       <td>{word.transcription}</td>
       <td>{word.translation}</td>
       <td>{word.theme}</td>
-      <td><button className='edit-button'></button></td>
-      <td><button className='delete-button'></button></td>
+      <td><button onClick={()=>{setIsEdit(false)}} className='edit-button'></button></td>
+      <td><button onClick={()=>{setIsEdit(false)}} className='delete-button'></button></td>
     </tr>
   });
 
   return <React.Fragment>
+    {isEdit && 
   <table>
      <tr>
         <th>СЛОВО</th>
@@ -50,19 +54,42 @@ function DataList() {
         <th className='common-buttons'></th>
         <th className='common-buttons'></th>
      </tr>
-     <tr>
-    <td><input type='text'></input></td>
-    <td><input type='text'></input></td>
-    <td><input type='text'></input></td>
-    <td><input type='text'></input></td>
-    <td><button className='save-button'>Сохранить</button></td>
-    <td><button className='cancel-button'>Отмена</button></td>
-    </tr>
   <tbody>
      {data}
   </tbody>
-</table></React.Fragment>
+</table>}
+{isSave && <table>
+     <tr>
+        <th>СЛОВО</th>
+        <th>ТРАНСКРИПЦИЯ</th>
+        <th>ПЕРЕВОД</th>
+        <th>ТЕМА</th> 
+        <th className='common-buttons'></th>
+        <th className='common-buttons'></th>
+     </tr>
+  <tbody>
+     {data}
+  </tbody>
+</table>}
 
+{!isEdit && <table>
+     <tr>
+        <th>СЛОВО</th>
+        <th>ТРАНСКРИПЦИЯ</th>
+        <th>ПЕРЕВОД</th>
+        <th>ТЕМА</th> 
+        <th className='common-buttons'></th>
+        <th className='common-buttons'></th>
+     </tr>
+<tr>
+    <td><input type='text'></input></td>
+    <td><input type='text'></input></td>
+    <td><input type='text'></input></td>
+    <td><input type='text'></input></td>
+    <td><button onClick={()=>{setIsEdit(true)}} className='save-button'>Сохранить</button></td>
+    <td><button className='cancel-button'>Отмена</button></td>
+    </tr> </table>}
+</React.Fragment>
 
 }
 
