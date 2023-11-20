@@ -1,46 +1,25 @@
 import React, { useState} from 'react';
 import './DataList.scss';
+import Data from '../../comps/Data/Data.json';
+
+const data = JSON.stringify(Data);
+const data1 = JSON.parse(data);
 
 function DataList() { 
-
-  const words = [
-    {
-      id: 14426,
-      name: "bag",
-      transcription: "[bæg]",
-      translation: "сумка",
-      theme: "аксессуары",
-    }
-    ,
-     {
-      id: 14428,
-      name: "hamster",
-      transcription: "[ˈhæmstə]",
-      translation: "хомяк",
-      theme: "животное",
-     },
-  
-     {
-      id: 14429,
-      name: "elephant",
-      transcription: "[ˈelɪfənt]",
-      translation: "слон",
-      theme: "животное",
-     },
-  ];
   
   const [isEdit, setIsEdit] = useState(false);
   const [isSave, setIsSave] = useState(false);
 
-  let data = words.map((word) => {
-    return <tr key={word.id}>
-      <td>{word.name}</td>
-      <td>{word.transcription}</td>
-      <td>{word.translation}</td>
-      <td>{word.theme}</td>
+  let data2 = data1.map((data1) => {
+    return <tr key={data1.id}>
+      <td>{data1.english}</td>
+      <td>{data1.transcription}</td>
+      <td>{data1.russian}</td>
+      <td>{data1.tags}</td>
       <td><button onClick={()=>{setIsEdit(false)}} className='edit-button'></button></td>
       <td><button onClick={()=>{setIsEdit(false)}} className='delete-button'></button></td>
     </tr>
+
   });
 
   return <React.Fragment>
@@ -55,7 +34,7 @@ function DataList() {
         <th className='common-buttons'></th>
      </tr>
   <tbody>
-     {data}
+     {data2}
   </tbody>
 </table>}
 {isSave && <table>
@@ -68,7 +47,7 @@ function DataList() {
         <th className='common-buttons'></th>
      </tr>
   <tbody>
-     {data}
+     {data2}
   </tbody>
 </table>}
 

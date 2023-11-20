@@ -1,30 +1,12 @@
 import React, {useState} from 'react';
 import Card from '../../comps/Card/Card';
 import '../Learning/Learning.scss';
+import Data from '../../comps/Data/Data.json';
 
-const words = [
-    {
-      id: 14426,
-      name: "bag",
-      transcription: "[bæg]",
-      translation: "сумка",
-    }
-    ,
-     {
-      id: 14428,
-      name: "hamster",
-      transcription: "[ˈhæmstə]",
-      translation: "хомяк",
-     },
-  
-     {
-      id: 14429,
-      name: "elephant",
-      transcription: "[ˈelɪfənt]",
-      translation: "слон",
-     },
-  ];
+const data = JSON.stringify(Data);
+const data1 = JSON.parse(data);
 
+console.log(data1)
 
 function Learning() {
     const [selectedId, setSelectedId] = useState(null);
@@ -39,7 +21,7 @@ function Learning() {
           <section>
                 <button className='arrow-left'></button>
             {
-                words.map((word) => <Card key={word.id} id={word.id} name={word.name} transcription={word.transcription} translation={word.translation} onClick={onClick} selectedId={selectedId} isSelected={isSelected}/>
+                data1.map((data1) => <Card key={data1.id} id={data1.id} english={data1.english} transcription={data1.transcription} translation={data1.russian} tags={data1.tags} onClick={onClick} selectedId={selectedId} isSelected={isSelected}/>
                 ) }
                 <button className='arrow-right'></button>
             </section>
