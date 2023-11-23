@@ -12,6 +12,8 @@ const onClick = (id) => {
 }
 
 return (
+<section>
+<button className='arrow-left'></button>
 
   <div className={selectedId === id ?'card ' + (isSelected ? 'selected' :'card') : 'card'} key={id} onClick={()=>{onClick(id)}} >
     <h2 className='card__title'>{english}</h2>
@@ -20,6 +22,8 @@ return (
     <Button className={'card__button' ? 'open' : 'card__button'} name={'Показать перевод'}/>
     {selectedId === id ? <p className='card__translation'>{russian}</p> : <p className='card__translation'></p>} 
   </div>
+    <button className='arrow-right'></button>
+  </section>
   
 )
 }
