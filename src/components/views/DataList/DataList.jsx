@@ -37,6 +37,7 @@ function DataList() {
      {data2}
   </tbody>
 </table>}
+
 {isSave && <table>
      <tr>
         <th>СЛОВО</th>

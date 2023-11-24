@@ -1,9 +1,9 @@
 import React from 'react';
-import DataList from '../../views/DataList/DataList';
+import Table from '../../views/DataList/Table';
 
 function Training() {
     return <React.Fragment>
-    <DataList />
+    <Table />
     </React.Fragment>
 }
 
