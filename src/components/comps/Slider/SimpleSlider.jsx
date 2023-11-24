@@ -3,7 +3,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './style.css';
-//import Card from '../Card/Card';
+
+import Card from '../Card/Card';
+
+function Slide() {
+
+    return (
+      <Card/>
+    )
+}
 
 function NextArrow(props) {
   const { className, onClick } = props;
@@ -17,11 +25,11 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-  const { className, onClick } = props;
+  const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{display: "block", background: "black", left: 0 }}
+      style={{ ...style, display: "block", background: "black", left: 0 }}
       onClick={onClick}
     />
   );
@@ -51,6 +59,7 @@ function SimpleSlider () {
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
+            slidesToScroll: 1,
           }
         },
         
@@ -62,25 +71,14 @@ function SimpleSlider () {
       <div>
         <h2> Single Item</h2>   
         <Slider {...settings}>
-          <div>
-        1
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
+          <Slide/>
+          <Slide/>
+          <Slide/>
+          <Slide/>
+          <Slide/>
+          <Slide/>
         </Slider>
+        
       </div>
     );
 
